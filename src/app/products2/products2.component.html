@@ -1,0 +1,23 @@
+<div class="container">
+
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+
+      <th scope="col">Product Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Weight</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="product2"  *ngFor="let product of (stateService.products$ | async)">
+
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.weight }}</td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>

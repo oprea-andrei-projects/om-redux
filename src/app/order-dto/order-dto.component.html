@@ -1,0 +1,33 @@
+<div class="container">
+
+
+  <table class="table table-bordered theTable">
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col" >Products </th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    <ng-container *ngIf="orderDTO$ | async as orderDto">
+      <tr *ngFor="let product of orderDto.products; let i = index">
+        <td *ngIf="i === 0" [attr.rowspan]="orderDto.products.length">{{ orderDto.orderId }}</td>
+        <td>{{ product.productName }}</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Total Price: {{ orderDto.totalPrice }}</td>
+      </tr>
+      <tr>
+        <td colspan="4">Total Weight: {{ orderDto.totalWeight }}</td>
+      </tr>
+
+    </ng-container>
+
+
+    </tbody>
+  </table>
+</div>
+

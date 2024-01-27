@@ -1,1 +1,189 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header .social-links {
+  display: flex;
+  gap: 1em;
+}
+
+header .social-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  height: 75vh;
+}
+
+aside {
+  background-color: #f0f0f0;
+  padding: 1em;
+  width: 20%;
+  height: 100%;
+}
+
+aside a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 0.5em 0;
+  transition: background-color 0.3s;
+}
+
+aside a:hover {
+  background-color: #ddd;
+}
+
+.content-container {
+  flex: 1;
+  padding: 1em;
+}
+
+.widget {
+  margin-bottom: 20px;
+}
+
+.widget-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.comment {
+  font-size: 14px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  margin-top: 35px;
+}
+
+#searchBtn{
+  border: 1px solid black;
+  cursor: pointer;
+}
+/* Add a style for the active class */
+aside ul li.active {
+  background-color: #ddd;
+}
+
+/* Add any other styling for the list items as needed */
+aside ul li {
+  list-style: none;
+  padding: 0.5em;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+aside ul li:hover {
+  background-color: #eee;
+}
+
+
+td {
+  color: black;
+}
+
+aside{
+
+  width: 20%;
+  margin-left: 0px;
+}
+
+.container{
+
+  flex: 1;
+
+  padding: 20px;
+  margin-left: 0px;
+}
+
+div.product{
+  display: none;
+}
+
+
+
+
+.container2 {
+  display: flex;
+
+  height: 75vh;
+  width: 100vw
+;
+}
+
+aside {
+  background-color: #f0f0f0;
+  padding: 1em;
+  width: 20%;
+}
+
+.content-container2 {
+  flex: 1;
+  padding: 1em;
+
+
+}
+
+.searchArea{
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.theTable{
+
+  width: 200%;
+}
+.searchInput{
+
+  height: 37px;
+  border-radius: 10px;
+
+
+}
+.btn{
+
+  /*border: 1px solid black;*/
+  /*cursor: pointer;*/
+
+}

@@ -1,0 +1,23 @@
+
+<div class="container">
+
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+
+      <th scope="col">Product Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Weight</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+
+        <td>{{ product.productName }}</td>
+        <td>{{ product.quantityProductPrice }}</td>
+        <td>{{ product.weight }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
