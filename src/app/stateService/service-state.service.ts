@@ -49,7 +49,7 @@ export class ServiceStateService {
   setOrder(order:Order){
 
     this.orderSubject.next(order)
-    this.order$.subscribe(data => console.log('stateserviceOrder ', data))
+   // this.order$.subscribe(data => console.log('stateserviceOrder ', data))
 
 
   }

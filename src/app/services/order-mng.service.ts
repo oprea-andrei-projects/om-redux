@@ -24,27 +24,47 @@ export class OrderMngService {
 
   }
 
+  // getTheOrderDTO(orderNmber:number){
+  //
+  //   return this.http.get<OrderDTO>(`${this.server}/detailsByOrderNumber/${orderNmber}`).pipe(
+  //     catchError(this.handleError)
+  //   ).subscribe(
+  //
+  //     {
+  //       next:(orderDTO) =>{
+  //         console.log('from service', orderDTO)//aici e ok
+  //         this.oDtoState.setOrderDto(orderDTO)
+  //         this.oDtoState.setLoading(false)
+  //
+  //       },
+  //       error:(error) =>{
+  //
+  //           this.oDtoState.setError(error)
+  //           this.oDtoState.setLoading(false)
+  //       }
+  //     }
+  //   )
+  // }
+
+
   getTheOrderDTO(orderNmber:number){
 
-    return this.http.get<OrderDTO>(`${this.server}/detailsByOrderNumber/${orderNmber}`).pipe(
-      catchError(this.handleError)
-    ).subscribe(
-
-      {
-        next:(orderDTO) =>{
-          console.log('from service', orderDTO)//aici e ok
-          this.oDtoState.setOrderDto(orderDTO)
-          this.oDtoState.setLoading(false)
-
-        },
-        error:(error) =>{
-
-            this.oDtoState.setError(error)
-            this.oDtoState.setLoading(false)
-        }
-      }
-    )
+    return this.http.get<OrderDTO>(`${this.server}/detailsByOrderNumber/${orderNmber}`)
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   getProductDetails(prodDto:ProductDTO){
 
@@ -54,8 +74,17 @@ export class OrderMngService {
       tap((prod) => this.oDtoState.setProducts(prod))
     )
 
-
   }
+
+
+
+
+
+
+
+
+
+
 
   getOrderById(id:number){
     return this.http.get<Order>(`${this.server}/findOrderById/`+id).pipe(
@@ -67,6 +96,7 @@ export class OrderMngService {
   getAllOrderDetails(){
     return this.http.get(`${this.server}/allOrderDetails`).pipe(
       catchError(this.handleError),
+
 
     )
   }

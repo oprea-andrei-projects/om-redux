@@ -16,6 +16,8 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { Products2Component } from './products2/products2.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EffectsModule } from '@ngrx/effects';
+import { OrderDtoEffectsComponent } from './order-dto-effects/order-dto-effects.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     OrderDtoComponent,
     HomeComponent,
     Products2Component,
+    OrderDtoEffectsComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     StoreDevtoolsModule.instrument(),
     FormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    EffectsModule.forRoot([OrderDtoEffectsComponent]),
+
   ],
   providers: [OrderMngService],
   bootstrap: [AppComponent]
