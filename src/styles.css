@@ -187,3 +187,7 @@ aside {
   /*cursor: pointer;*/
 
 }
+
+li:hover{
+  background-color: blue;
+}

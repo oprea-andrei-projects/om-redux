@@ -49,20 +49,11 @@ export class OrderMngService {
 
   getTheOrderDTO(orderNmber:number){
 
-    return this.http.get<OrderDTO>(`${this.server}/detailsByOrderNumber/${orderNmber}`)
+    return this.http.get<OrderDTO>(`${this.server}/detailsByOrderNumber/${orderNmber}`).pipe(
+      tap(data => console.log('din service ', data))
+
+    )
   }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -77,15 +68,6 @@ export class OrderMngService {
   }
 
 
-
-
-
-
-
-
-
-
-
   getOrderById(id:number){
     return this.http.get<Order>(`${this.server}/findOrderById/`+id).pipe(
       catchError(this.handleError),
@@ -96,13 +78,8 @@ export class OrderMngService {
   getAllOrderDetails(){
     return this.http.get(`${this.server}/allOrderDetails`).pipe(
       catchError(this.handleError),
-
-
     )
   }
-
-
-
 
   private handleError(error: HttpErrorResponse): Observable<any> {
     console.error(error);

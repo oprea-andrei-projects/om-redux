@@ -8,6 +8,9 @@ import {Product2} from "../../model/product2";
 const GET_ALL_ORDERSDTOS = 'GET_ALL_ORDERSDTOS';
 const GET_ORDERDTO_BY_ID = 'GET_ORDERDTO_BY_ID';
 const GET_PRODUCTS_DETAILS = 'GET_PRODUCTS_DETAILS';
+const SET_ORDERDTO_SUCCESS = 'SET_ORDERDTO_SUCCESS';
+const SET_ORDERDTO_FAILURE = 'SET_ORDERDTO_FAILURE';
+const GET_ORDERDTO_BY_ID2 = 'GET_ORDERDTO_BY_ID2';
 
 
 export const setAllOrderDtos = createAction(
@@ -22,9 +25,20 @@ export const setOrderDTOById = createAction(
 
 )
 
-// export const setProductsDetails = createAction(
-//   GET_PRODUCTS_DETAILS,
-//   props<{ products: Product2[] }>()
-// );
+export const setOrderDTOById2 = createAction(
+  GET_ORDERDTO_BY_ID2,
+  props<{id:string}>()
+)
+
+
+export const setOrderDTOSuccess = createAction(
+  SET_ORDERDTO_SUCCESS,
+  props<{message: string}>()
+)
+
+export const setOrderDTOFailure = createAction(
+  SET_ORDERDTO_FAILURE,
+  props<{error: Error}>
+)
 
 
